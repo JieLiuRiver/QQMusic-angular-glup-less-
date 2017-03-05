@@ -1,0 +1,35 @@
+.newswiper-wrapper{
+    overflow: hidden;
+    margin-bottom: 25px;
+    background: #fff;
+    top: 60px;
+    .list{
+        height: 325px;
+        .item{
+            width: 751px;
+            height: 300px;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            transition: transform .2s ease-out;
+            -webkit-transition: transform .2s ease-out;
+        }
+    }
+    .pagination{
+          bottom: 0px;
+          margin: 0;
+          left: 0; 
+          width: 100%;
+          .pagination-bullet{
+            width: 40px;
+            height: 1px;
+            background: #000;
+            opacity: .2;
+            border-radius: 0;
+            margin-right: 5px;
+            &.pagination-bullet-active{
+                opacity: 1;
+            }
+          }
+    }
+}

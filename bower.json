@@ -1,0 +1,22 @@
+{
+  "name": "angular-QQMusic_PC",
+  "authors": [
+    "heliujie <268079@163.com>"
+  ],
+  "description": "",
+  "main": "",
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "angular": "^1.6.2",
+    "jquery": "^3.1.1",
+    "angular-ui-router": "ui-router#^0.4.2"
+  },
+  "devDependencies": {
+    "angular-ui-router": "ui-router#^0.4.2",
+    "swiper": "^3.4.1"
+  }
+}

@@ -1,0 +1,25 @@
+
+<section app-head
+     sublist="vm.subNavListData"
+     toplist="vm.topNavListData"
+     hotkeylist="vm.hotkeyListData">
+</section>
+
+<div ui-view="main"></div>
+
+<section
+        app-footer>
+
+
+
+
+</section>
+<a href="javascript:;"
+   class="fixed-btn btn-top" ng-click="vm.toTop()"
+   ng-show="vm.isNeedTopBtn"><span class="arrow"></span></a>
+<a href="javascript:;"
+   class="fixed-btn feedback">
+    <span>意见反馈</span>
+</a>
+<a href="javascript:;"
+   class="fixed-btn penplayer"><span>播放器</span></a>

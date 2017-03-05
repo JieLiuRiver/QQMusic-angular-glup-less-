@@ -1,0 +1,72 @@
+<!-- 头部 -->
+<div class="container-fluid f-m0 f-p0">
+    <div class="row section-inner f-pr">
+        <div class="title f-pa">
+            <a href="javascript:void(0)"
+                class="f-ib f-w f-h">
+                <img src="https://y.gtimg.cn/mediastyle/yqq/img/logo@2x.png" width="100%" height="100%">
+            </a>
+        </div>
+        <!--导航-->
+        <div class="top-nav-wrapper f-pa f-ib">
+            <ul class="list clearfix f-p0 f-m0 f-h f-w">
+                <li class="item pull-left f-ib"
+                    ng-repeat="item in toplist"
+                    data-id="{{item.id}}">
+                    <a href="javascript:void(0)"
+                        class="f-ib f-w f-h link"
+                        ng-class="{'current': item.isActive}">
+                        {{item.name}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--搜索-->
+        <div class="top-search f-pa f-ib">
+            <div class="input-wrapper">
+                <input type="text" class="search" placeholder="李健"
+                       ng-focus="searchInputFocusEvent()"
+                        ng-blur="searchInputBlurEvent()">
+                <i class="icon-search f-pa"></i>
+            </div>
+
+            <div class="smart-box f-ib f-pa" ng-show="isNeedSmartBox">
+                <ul class="list f-m0 f-p0">
+                    <li class="item f-ib f-w" ng-repeat="item in hotkeylist">
+                        <a href="javascript:;"
+                            class="f-ellipsis link clearfix f-w">
+                            <span class="number f-ib f-h pull-left">{{$index+1}}</span>
+                            <span class="name f-ib f-h pull-left f-ellipsis">{{item.name}}</span>
+                            <span class="listen f-ib f-h pull-right">{{item.listen}}万</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="history f-w clearfix">
+                    <span class="f-h pull-left">搜索历史</span>
+                    <i class="icon f-ib pull-right f-pr"></i>
+                </div>
+            </div>
+        </div>
+        <!-- 登录 -->
+        <div class="opt clearfix f-pa">
+            <a href="javascript:;" class="login f-ib f-h pull-left">登录</a>
+            <a href="javascript:;" class="open-vip f-ib f-h pull-left f-mt20 f-mr10">开通绿钻豪华版</a>
+            <a href="javascript:;" class="open-music f-ib f-h pull-left f-mt20">开通付费包</a>
+        </div>
+        <!--子导航-->
+        <div class="sub-nav">
+            <ul class="list clearfix">
+                <li class="item pull-left f-h f-ib" ng-repeat="item in sublist">
+                    <a href="javascript:;"
+                       class="f-ib f-h link"
+                       id="{{item.id}}"
+                       ng-class="{'current': item.isActive}"
+                       ui-sref="{{item.sref}}"
+                       ng-click="changeStatus(item)">
+                        {{item.name}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

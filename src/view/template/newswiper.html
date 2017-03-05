@@ -1,0 +1,17 @@
+<div class="newswiper-wrapper f-pr">
+	<ul class="list f-w f-pr">
+		<li class="item f-pa f-ib" 
+			ng-repeat="item in listinner"
+			data-idx="{{$index}}"
+			ng-style="item.style"
+			ng-class="item.classname">
+			<img src="{{item.url}}" width="100%" height="100%"/>
+		</li>
+	</ul>
+	<div class="pagination f-pa f-tc">
+		<div class="pagination-bullet f-ib" 
+			ng-repeat="item in swiperlistdata"
+			ng-class="{'pagination-bullet-active': item.disX == 224}">
+		</div>
+	</div>
+</div>

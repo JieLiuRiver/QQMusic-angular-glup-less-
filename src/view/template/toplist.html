@@ -1,0 +1,44 @@
+<div class="toplist-wrapper bgdefault f-w">
+	<div class="t-box f-w">
+		<div class="e-title f-pr">
+			<h2 class="t f-tc">
+				<span class="t-bg f-ib bgdefault"></span>
+			</h2>
+        		<i class="line left f-pa"></i>
+        		<i class="line right f-pa"></i>
+        		<a href="javascript:void(0)" class="all f-ib f-pa">
+	            全部
+	            <i class="icon-arrow icon f-ib"></i>
+	        </a>
+		</div>
+		
+		<div class="content">
+			<ul class="t-list clearfix">
+				<li class="t-item f-pr" ng-repeat="itemLi in toplist"
+					ng-mouseenter="enterEvent(itemLi)"
+					ng-mouseleave="leaveEvent(itemLi)">
+					<div class="t-bg bgdefault f-w f-h f-pa"
+						ng-style="getbgposition($index)"
+						></div>
+					<i class="t-play f-ib f-pa bgdefault"
+					   ng-class="{'showAnimated': typeof (itemLi.isHoving) != 'undefined' && itemLi.isHoving, '': !itemLi.isHoving}"></i>
+					<i class="t-line f-pa f-ib"
+					   ng-class="{'': typeof (itemLi.isHoving) != 'undefined' && itemLi.isHoving, 'showAnimated': !itemLi.isHoving}"></i>
+					<i class="t-mask f-pa f-ib f-w f-h"
+					   ng-class="{'showAnimated': typeof (itemLi.isHoving) != 'undefined' && itemLi.isHoving, '': !itemLi.isHoving}"></i>
+					<div class="t-title f-pa f-tc">
+						<span class="f-ib t-t">巅峰榜</span>
+						<div class="pop f-w">{{itemLi.title}}</div>
+					</div>
+					<ul class="songlist f-pa">
+						<li class="song-item f-pr" ng-repeat="item in itemLi.list">
+							<span class="number f-ib f-pa">{{item.id}}</span>
+							<div class="songname f-w f-ellipsis">{{item.name}}</div>
+							<div class="singer f-w f-ellipsis">{{item.singer}}</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

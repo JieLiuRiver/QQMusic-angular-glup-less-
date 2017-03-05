@@ -1,0 +1,54 @@
+<div class="taogelist-wrapper f-pr" >
+    <div class="slide2-box">
+        <div class="section f-w f-pr">
+            <div class="e-title f-pr">
+                <h2 class="t f-tc">
+                    <span class="t-bg f-ib bgdefault"></span>
+                </h2>
+                <i class="line left f-pa"></i>
+                <i class="line right f-pa"></i>
+            </div>
+            <!-- swiper -->
+            <div class="swiper-container f-h swiper2-hook">
+                <div class="swiper-wrapper f-h f-pr">
+                    <div class="swiper-slide f-h" ng-repeat="itemOut in taogelist">
+                        <div class="box f-h f-w" ng-repeat= "item in itemOut">
+                            <div class="cover f-w">
+                                <a href="javascript:void(0)" class="f-w f-ib link f-pr">
+                                    <img ng-src="{{item.url}}" class="pic" width="100%" height="100%">
+                                    <i class="mask f-ib f-w"></i>
+                                    <i class="icon-play f-ib f-pa"></i>
+                                </a>
+                            </div>
+                            <div class="info f-w">
+                                <h4 class="title f-w">
+                                    <a href="javascript:void(0)"
+                                       class="link f-ellipsis">
+                                        {{item.title}}
+                                    </a>
+                                    <a href="javascript:void(0)"
+                                       class="singername f-ellipsis ">
+                                        {{item.info}}
+                                    </a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination f-w pagination2-hook" id="pagination2"></div>
+        </div>
+    </div>
+    <div class="slide-btn prev f-pa"
+         ng-class="{'show-btn': isNeedSlideBtn}"
+         ng-click="slide1Prev()">
+        <i class="arrow-left f-ib"></i>
+    </div>
+    <div class="slide-btn next f-pa"
+         ng-class="{'show-btn': isNeedSlideBtn}"
+         ng-click="slide1Next()">
+        <i class="arrow-right f-ib"></i>
+    </div>
+</div>
